@@ -4,8 +4,8 @@ using namespace std;
 
 int t;
 int a, b;
-int liczba_c[2];
-bool czy=false;
+int liczba_c;
+bool czy;
 
 int main()
 {
@@ -13,28 +13,24 @@ int main()
 
     for (int i = 0; i < t; i++)
     {
+        czy=false;
+
         cin>>a>>b;
 
-        if(a>b) liczba_c[i]=a;
-        else if(b>a) liczba_c[i]=b;
+        if(a>b) liczba_c=a;
+        else if(b>a) liczba_c=b;
 
 
         while(czy==false){
-            if((liczba_c[i]%a==0)&&(liczba_c[i]%b==0)){
+            if((liczba_c%a==0)&&(liczba_c%b==0)){
                 czy=true;
             }
             else{
-                liczba_c[i]++;
+                liczba_c++;
             }
         }
-        czy=false;
+        cout<<liczba_c<<endl;
     }
-    
-    for (int i = 0; i < 2; i++)
-    {
-        cout<<liczba_c[i]<<endl;
-    }
-    
 
     return 0;
 }
