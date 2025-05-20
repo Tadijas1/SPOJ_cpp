@@ -5,6 +5,7 @@ using namespace std;
 
 int t;
 string slowo;
+int ile = 1;
 
 int main()
 {
@@ -14,26 +15,22 @@ int main()
     {
         cin>>slowo;
 
-        int ile = 0;
-        for (int i = 0; i <= slowo.size(); i++)
+        ile=1;
+        for (int i = 0; i < slowo.size(); i++)
         {
-            if(slowo[i]==slowo[i-1]){
+            if(slowo[i]==slowo[i+1]){
                 ile++;
             }
             else if(ile>2){
-                ile++;
-                cout<<slowo[i-1]<<ile<<""<<slowo[i]<<"";
-                ile=0;
-                
+                cout<<slowo[i]<<ile;
+                ile=1;
             }
             else{
-                if((ile<2)&&(slowo[i]!=slowo[i-1])){
-                  cout<<slowo[i-1]<<""<<slowo[i]<<"";
-                  ile=0;  
+                if(ile==2){
+                    cout<<slowo[i-1]<<slowo[i];
+                    ile=1;
                 }
-                else{
-                    cout<<slowo[i]<<"";
-                }
+                else if(ile==1) cout<<slowo[i];
             }
         }
         cout<<endl;
@@ -41,6 +38,3 @@ int main()
 
     return 0;
 }
-
-
-//mama

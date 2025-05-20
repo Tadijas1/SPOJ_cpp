@@ -17,9 +17,15 @@ int main()
 
         cin>>a>>b;
 
-        if(a>b) liczba_c=a;
-        else if(b>a) liczba_c=b;
-
+        if(a>b){
+           liczba_c=a; 
+        }
+        else if(b>a){
+            liczba_c=b;
+        }
+        else{
+            liczba_c=a;
+        }
 
         while(czy==false){
             if((liczba_c%a==0)&&(liczba_c%b==0)){

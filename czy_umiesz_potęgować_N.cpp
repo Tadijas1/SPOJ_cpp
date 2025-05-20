@@ -6,6 +6,11 @@ using namespace std;
 int t;
 long a, b;
 
+int potegowanie(long x, long y)
+{
+    return (int)pow(x, y);
+}
+
 int main()
 {
     cin>>t;
@@ -14,6 +19,7 @@ int main()
     {
         cin>>a;
         cin>>b;
+        cout<<potegowanie(a, b)<<endl;
     }
     
     return 0;
