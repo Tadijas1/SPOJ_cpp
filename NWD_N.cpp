@@ -34,9 +34,10 @@ int main()
     for (int i = 0; i < t; i++)
     {
         cin>>liczba1>>liczba2;
+        liczba1=liczba1%1000000;
+        liczba2=liczba2%1000000;
         cout<<nwd(liczba1, liczba2)<<endl;
     }
     
-
     return 0;
 }
